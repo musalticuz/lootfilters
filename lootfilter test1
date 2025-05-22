@@ -1,0 +1,528 @@
+// module:Alchs
+
+
+// parameterize as desired
+#define DROP(_name) if(name:_name) {color = BLACK; \
+backgroundColor = GOLD; \
+borderColor = BLACK; \
+textAccent = 3; \
+showLootbeam = false;\
+}
+
+DROP("* battlestaff")\
+DROP("Dragon med helm")\
+DROP("Lava battlestaff")\
+DROP("Mystic air staff")\
+DROP("Rune 2h sword")\
+DROP("Rune battleaxe")\
+DROP("Rune chainbody")\
+DROP("Rune full helm")\
+DROP("Rune halberd")\
+DROP("Rune kiteshield")\
+DROP("Rune med helm")\
+DROP("Rune pickaxe")\
+DROP("Rune platebody")\
+DROP("Rune scimitar")\
+DROP("Rune sq shield")\
+DROP("Rune sword")\
+DROP("Rune platelegs")\
+DROP("Rune plateskirt")\
+
+
+// endmodule:Alchs
+
+
+
+// module:Potions
+
+#define TEXT_HIGHLIGHT(_name, _color) if (name:_name) { color = _color; textAccent = 2; }
+
+TEXT_HIGHLIGHT("Super restore*", "ffe91e63")
+TEXT_HIGHLIGHT("Saradomin brew*", "ffff00")
+TEXT_HIGHLIGHT("Prayer potion*", "ff59D6AE")
+TEXT_HIGHLIGHT("Sanfew serum*", "ffe59e9e")
+TEXT_HIGHLIGHT("Super combat potion*", "ff2a9e16")
+TEXT_HIGHLIGHT("Divine Super combat potion*", "ff2a9e16")
+TEXT_HIGHLIGHT("Ranging potion*", "ff5FB7DA")
+TEXT_HIGHLIGHT("Divine Ranging potion*", "ff5FB7DA")
+TEXT_HIGHLIGHT("Bastion potion*", "ffdb721c")
+TEXT_HIGHLIGHT("Divine Bastion potion*", "ffdb721c")
+
+
+// endmodule:Potions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// module:cox
+
+#define CONST_COX_AREA []
+
+#define VAR_COX_OVL_USERSTYLE textColor = "#1e88e5";textAccent = 4;
+#define VAR_COX_PEH_USERSTYLE textColor = "#ff00ff";textAccent = 4;
+#define VAR_COX_REV_USERSTYLE textColor = "#e91e63";textAccent = 4;
+#define VAR_COX_XER_USERSTYLE textColor = "#ffff00";textAccent = 4;
+
+#define VAR_COX_HIGHLIGHT []
+#define VAR_COX_HIGHLIGHT_USERSTYLE 
+
+if (name:VAR_COX_HIGHLIGHT) {
+  VAR_COX_HIGHLIGHT_USERSTYLE
+}
+
+if (name:"overload*") {
+  textColor = "#1e88e5";
+  textAccent = 4;
+  VAR_COX_OVL_USERSTYLE
+}
+
+if (name:"prayer enhance*") {
+  textColor = "#ff00ff";
+  textAccent = 4;
+  VAR_COX_PEH_USERSTYLE
+}
+
+if (name:"revitalisation*") {
+  textColor = "#e91e63";
+  textAccent = 4;
+  VAR_COX_REV_USERSTYLE
+}
+
+if (name:"xeric's aid*") {
+  textColor = "#ffff00";
+  textAccent = 4;
+  VAR_COX_XER_USERSTYLE
+}
+
+// endmodule:cox
+
+// module:toa
+
+#define CONST_TOA_AREA []
+
+#define VAR_TOA_AMB_USERSTYLE textColor = "#e3ece3";textAccent = 4;
+#define VAR_TOA_LQA_USERSTYLE textColor = "#35c6d7";textAccent = 4;
+#define VAR_TOA_NEC_USERSTYLE textColor = "#ffff00";textAccent = 4;
+#define VAR_TOA_TOE_USERSTYLE textColor = "#e91e63";textAccent = 4;
+
+#define VAR_TOA_HIGHLIGHT []
+#define VAR_TOA_HIGHLIGHT_USERSTYLE 
+
+if (name:VAR_TOA_HIGHLIGHT) {
+  VAR_TOA_HIGHLIGHT_USERSTYLE
+}
+
+if (name:"ambrosia*") {
+  textColor = "#e3ece3";
+  textAccent = 4;
+  VAR_TOA_AMB_USERSTYLE
+}
+
+if (name:"liquid adrenaline*") {
+  textColor = "#35c6d7";
+  textAccent = 4;
+  VAR_TOA_LQA_USERSTYLE
+}
+
+if (name:"nectar*") {
+  textColor = "#ffff00";
+  textAccent = 4;
+  VAR_TOA_NEC_USERSTYLE
+}
+
+if (name:"tears of elidinis*") {
+  textColor = "#e91e63";
+  textAccent = 4;
+  VAR_TOA_TOE_USERSTYLE
+}
+
+// endmodule:toa
+
+// module:unique
+
+#define CONST_UNIQUE_STIER [\
+  "*champion scroll",\
+  "infernal cape",\
+  "fire cape",\
+  "dizana's quiver*",\
+  "*max cape",\
+  "unsired",\
+  "ancient blood ornament kit",\
+  "ultor vestige",\
+  "venator vestige",\
+  "bellator vestige",\
+  "magus vestige",\
+  "executioner's axe head",\
+  "leviathan's lure",\
+  "siren's staff",\
+  "eye of the duke",\
+  "*mutagen",\
+  "slepey tablet",\
+]
+#define CONST_UNIQUE_ATIER [\
+  "brimstone key",\
+  "jar of*",\
+  "noxious pommel",\
+  "noxious point",\
+  "noxious blade",\
+  "*half of key (moon key)",\
+  "ancient shard",\
+]
+#define CONST_UNIQUE_BTIER [\
+  "dark totem",\
+  "mossy key",\
+  "giant key",\
+  "ecumenical key",\
+  "abyssal head",\
+  "araxyte head",\
+  "alchemical hydra heads",\
+  "kbd heads",\
+  "kq head*",\
+  "dark claw",\
+  "bludgeon claw",\
+  "bludgeon spine",\
+  "bludgeon axon",\
+  "hydra's eye",\
+  "hydra's fang",\
+  "hydra's heart",\
+  "strangled tablet",\
+  "scarred tablet",\
+  "sirenic tablet",\
+  "frozen tablet",\
+  "scurrius' spine",\
+  "vorkath's head",\
+]
+#define CONST_UNIQUE_CTIER [\
+  "dark totem top",\
+  "dark totem base",\
+  "dark totem middle",\
+  "long bone",\
+  "curved bone",\
+  "looting bag",\
+  "unidentified small fossil",\
+  "unidentified medium fossil",\
+  "unidentified large fossil",\
+  "unidentified rare fossil",\
+  "key master teleport",\
+  "chromium ingot",\
+  "blood quartz",\
+  "smoke quartz",\
+  "shadow quartz",\
+  "ice quartz",\
+  "pendant of ates*",\
+  "frozen cache",\
+  "ancient icon",\
+  "charged ice",\
+  "parasitic egg",\
+]
+
+#define VAR_UNIQUE_STIER_ADD ["*champion scroll","internal cape","fire cape","dizana's quiver*","*max cape","unsired","ancient blood ornament kit","ultor vestige","venator vestige","bellator vestige","magus vestige","executioner's axe head","leviathan's lure","siren's staff","eye of the duke","*mutagen","slepey tablet"]
+#define VAR_UNIQUE_STIER_NOT []
+#define VAR_UNIQUE_ATIER_ADD ["brimstone key","jar of*","noxious pommel","noxious point","noxious blade","*half of key (moon key)"]
+#define VAR_UNIQUE_ATIER_NOT []
+#define VAR_UNIQUE_BTIER_ADD ["dark totem","mossy key","giant key","ecumenical key","abyssal head","araxyte head","alchemical hydra heads","kbd heads","kq head*","dark claw","bludgeon claw","bludgeon spine","bludgeon axon","hydra's eye","hydra's fang","hydra's heart","strangled tablet","scarred tablet","sirenic tablet","frozen tablet","scurrius' spine","vorkath's head"]
+#define VAR_UNIQUE_BTIER_NOT []
+#define VAR_UNIQUE_CTIER_ADD ["dark totem top","dark totem base","dark totem middle","long bone","curved bone","looting bag","unidentified small fossil","unidentified medium fossil","unidentified large fossil","unidentified rare fossil","key master teleport","chromium ingot","blood quartz","smoke quartz","shadow quartz","ice quartz","pendant of ates*","frozen cache","ancient icon","charged ice","parasitic egg"]
+#define VAR_UNIQUE_CTIER_NOT []
+
+#define VAR_UNIQUE_STIER_CUSTOMSTYLE textColor = "#ff0000";backgroundColor = "#ffffff";borderColor = "#ff0000";fontType = 3;showLootbeam = true;
+#define VAR_UNIQUE_ATIER_CUSTOMSTYLE textColor = "#ffffff";backgroundColor = "#af6025";borderColor = "#ffffff";textAccent = 3;showLootbeam = true;
+#define VAR_UNIQUE_BTIER_CUSTOMSTYLE textColor = "#000000";backgroundColor = "#af6025";borderColor = "#000000";textAccent = 3;
+#define VAR_UNIQUE_CTIER_CUSTOMSTYLE textColor = "#af6025";backgroundColor = "#350d0d";borderColor = "#af6025";textAccent = 3;
+
+if (!name:VAR_UNIQUE_STIER_NOT && (name:CONST_UNIQUE_STIER || name:VAR_UNIQUE_STIER_ADD)) {
+  LIB_COLOR3(RED, WHITE)
+  fontType = 3;
+  showLootbeam = true;
+  VAR_UNIQUE_STIER_CUSTOMSTYLE
+}
+if (!name:VAR_UNIQUE_ATIER_NOT && (name:CONST_UNIQUE_ATIER || name:VAR_UNIQUE_ATIER_ADD)) {
+  LIB_COLOR3(WHITE, LIB_LIGHT_BROWN)
+  textAccent = 3;
+  showLootBeam = true;
+  VAR_UNIQUE_ATIER_CUSTOMSTYLE
+}
+if (!name:VAR_UNIQUE_BTIER_NOT && (name:CONST_UNIQUE_BTIER || name:VAR_UNIQUE_BTIER_ADD)) {
+  LIB_COLOR3(BLACK, LIB_LIGHT_BROWN)
+  textAccent = 3;
+  VAR_UNIQUE_BTIER_CUSTOMSTYLE
+}
+if (!name:VAR_UNIQUE_CTIER_NOT && (name:CONST_UNIQUE_CTIER || name:VAR_UNIQUE_CTIER_ADD)) {
+  LIB_COLOR3(LIB_LIGHT_BROWN, LIB_BURGUNDY)
+  textAccent = 3;
+  VAR_UNIQUE_CTIER_CUSTOMSTYLE
+}
+
+// endmodule:unique
+
+// module:value
+
+// FIXME
+meta {
+  name = "riktenx/filterscape";
+}
+
+// FIXME
+#define LIB_BROWN       "#d2b287"
+#define LIB_LIGHT_BROWN "#af6025"
+#define LIB_ORANGE      "#f05a23"
+#define LIB_CARAMEL     "#f99619"
+#define LIB_GOLD        "#d59f00"
+#define LIB_BURGUNDY    "#350d0d"
+#define LIB_DARK_GREEN  "#09600d"
+#define LIB_KHAKI       "#beb287"
+
+// FIXME
+#define LIB_COLOR2(_fg) textColor = _fg; borderColor = _fg;
+#define LIB_COLOR3(_fg, _bg) textColor = _fg; borderColor = _fg; backgroundColor = _bg;
+#define LIB_HIDE1(_name) if (name:_name && quantity:==1) { hidden = true; }
+#define LIB_DARK_BG(_name, _color) if (name:_name) { color = _color; borderColor = _color; backgroundColor = BLACK; }
+#define LIB_TEXT_HIGHLIGHT(_name, _color) if (name:_name) { color = _color; textAccent = 2; }
+
+#define VAR_VALUE_T9_ENABLED false
+#define VAR_VALUE_T8_ENABLED false
+#define VAR_VALUE_T7_ENABLED false
+#define VAR_VALUE_T6_ENABLED false
+#define VAR_VALUE_T5_ENABLED true
+#define VAR_VALUE_T4_ENABLED true
+#define VAR_VALUE_T3_ENABLED true
+#define VAR_VALUE_T2_ENABLED true
+#define VAR_VALUE_T1_ENABLED true
+#define VAR_VALUE_T0_ENABLED true
+
+#define VAR_VALUE_T9_VALUE 0
+#define VAR_VALUE_T8_VALUE 0
+#define VAR_VALUE_T7_VALUE 0
+#define VAR_VALUE_T6_VALUE 0
+#define VAR_VALUE_T5_VALUE 100000000
+#define VAR_VALUE_T4_VALUE 10000000
+#define VAR_VALUE_T3_VALUE 1000000
+#define VAR_VALUE_T2_VALUE 500000
+#define VAR_VALUE_T1_VALUE 100000
+#define VAR_VALUE_T0_VALUE 10000
+
+#define VAR_VALUE_T9_CUSTOMSTYLE 
+#define VAR_VALUE_T8_CUSTOMSTYLE 
+#define VAR_VALUE_T7_CUSTOMSTYLE 
+#define VAR_VALUE_T6_CUSTOMSTYLE 
+#define VAR_VALUE_T5_CUSTOMSTYLE textColor = "#ff0000";backgroundColor = "#ffffff";borderColor = "#ff0000";textAccent = 3;fontType = 2;showLootbeam = true;
+#define VAR_VALUE_T4_CUSTOMSTYLE textColor = "#ffffff";backgroundColor = "#f0a523";borderColor = "#ffffff";textAccent = 3;showLootbeam = true;
+#define VAR_VALUE_T3_CUSTOMSTYLE textColor = "#000000";backgroundColor = "#f0a523";borderColor = "#000000";lootbeamColor = "#f0a523";menuTextColor = "#f0a523";textAccent = 3;showLootbeam = true;
+#define VAR_VALUE_T2_CUSTOMSTYLE textColor = "#f99619";borderColor = "#f99619";textAccent = 2;
+#define VAR_VALUE_T1_CUSTOMSTYLE textColor = "#d59f00";textAccent = 2;
+#define VAR_VALUE_T0_CUSTOMSTYLE textColor = "#beb287";
+
+if (value:>=VAR_VALUE_T5_VALUE) {
+  LIB_COLOR3(RED, WHITE)
+  fontType = 2;
+  textAccent = 3;
+  showLootBeam = true;
+  VAR_VALUE_T5_CUSTOMSTYLE
+}
+if (value:>=VAR_VALUE_T4_VALUE) {
+  LIB_COLOR3(WHITE, LIB_ORANGE)
+  showLootBeam = true;
+  VAR_VALUE_T4_CUSTOMSTYLE
+}
+if (value:>=VAR_VALUE_T3_VALUE) {
+  LIB_COLOR3(BLACK, LIB_ORANGE)
+  textAccent = 3;
+  showLootbeam = true;
+  lootbeamColor = LIB_ORANGE;
+  menuTextColor = LIB_ORANGE;
+  VAR_VALUE_T3_CUSTOMSTYLE
+}
+if (value:>=VAR_VALUE_T2_VALUE) {
+  LIB_COLOR2(LIB_CARAMEL)
+  textAccent = 2;
+  VAR_VALUE_T2_CUSTOMSTYLE
+}
+if (value:>=VAR_VALUE_T1_VALUE) {
+  textColor = LIB_GOLD;
+  textAccent = 2;
+  VAR_VALUE_T1_CUSTOMSTYLE
+}
+if (value:>=VAR_VALUE_T0_VALUE) {
+  textColor = LIB_KHAKI;
+  VAR_VALUE_T0_CUSTOMSTYLE
+}
+
+// endmodule:value
+
+// module:currency
+
+#define VAR_CURRENCY_ADD ["Mole claw","Mole skin","Trading sticks","Numulite","Abyssal pearls","Anima-infused bark","Barronite shards","Blood money","Ecto-token","Frog token","Golden nugget","Glistening tear","Hallowed mark","Intelligence","Mark of grace","Mermaid's tear","Minnow","Molch pearl","Nuggets","Rare creature parts","Reward token credits","Stardust","Tokkul","Termites","Unidentified minerals","Warrior guild token","Blessed bone shards","Sun-kissed bones","Ecumenical key shard"]
+#define VAR_CURRENCY_NOT []
+
+#define CONST_CURRENCY_ITEMS [\
+  "Mole claw",\
+  "Mole skin",\
+  "Trading sticks",\
+  "Numulite",\
+  "Abyssal pearls",\
+  "Anima-infused bark",\
+  "Barronite shards",\
+  "Blood money",\
+  "Ecto-token",\
+  "Frog token",\
+  "Golden nugget",\
+  "Glistening tear",\
+  "Hallowed mark",\
+  "Intelligence",\
+  "Mark of grace",\
+  "Mermaid's tear",\
+  "Minnow",\
+  "Molch pearl",\
+  "Nuggets",\
+  "Rare creature parts",\
+  "Reward token credits",\
+  "Stardust",\
+  "Tokkul",\
+  "Termites",\
+  "Unidentified minerals",\
+  "Warrior guild token",\
+  "Blessed bone shards",\
+  "Sun-kissed bones",\
+  "Ecumenical key shard",\
+]
+
+#define VAR_CURRENCY_USERSTYLE textColor = "#beb287";
+
+if ((name:CONST_CURRENCY_ITEMS || name:VAR_CURRENCY_ADD) && !name:VAR_CURRENCY_NOT) {
+  textColor = "#beb287";
+  VAR_CURRENCY_USERSTYLE
+}
+
+// endmodule:currency
+
+// module:potion
+
+#define CONST_POTION_HIGHLIGHT(_name, _color, _userstyle) \
+  if (name:_name) {\
+    textColor = _color;\
+    textAccent = TEXTACCENT_OUTLINE;\
+    _userstyle\
+  }
+
+#define VAR_POTION_RESTORE_USERSTYLE textColor = "#e91e63";textAccent = 2;
+#define VAR_POTION_BREW_USERSTYLE textColor = "#ffff00";textAccent = 2;
+#define VAR_POTION_PRAYER_USERSTYLE textColor = "#59d6ae";textAccent = 2;
+#define VAR_POTION_SANFEW_USERSTYLE textColor = "#e59e9e";textAccent = 2;
+#define VAR_POTION_SUPERCOMBAT_USERSTYLE textColor = "#2a9e16";textAccent = 2;
+#define VAR_POTION_RANGE_USERSTYLE textColor = "#5fb7da";textAccent = 2;
+#define VAR_POTION_BASTION_USERSTYLE textColor = "#db721c";textAccent = 2;
+
+CONST_POTION_HIGHLIGHT("super restore*", "#e91e63", VAR_POTION_RESTORE_USERSTYLE)
+CONST_POTION_HIGHLIGHT("saradomin brew*", "#ffff00", VAR_POTION_BREW_USERSTYLE)
+CONST_POTION_HIGHLIGHT("prayer potion*", "#59d6ae", VAR_POTION_PRAYER_USERSTYLE)
+CONST_POTION_HIGHLIGHT("sanfew serum*", "#e59e9e", VAR_POTION_SANFEW_USERSTYLE)
+CONST_POTION_HIGHLIGHT("*super combat potion*", "#2a9e16", VAR_POTION_SUPERCOMBAT_USERSTYLE)
+CONST_POTION_HIGHLIGHT("*ranging potion*", "#5fb7da", VAR_POTION_RANGE_USERSTYLE)
+CONST_POTION_HIGHLIGHT("*bastion potion*", "#db721c", VAR_POTION_BASTION_USERSTYLE)
+
+// endmodule:potion
+
+// module:clue
+
+#define CONST_CLUE_DEFAULTBG             "#beb287"
+#define CONST_CLUE_BEGINNER_DEFAULTCOLOR "#ffffff"
+#define CONST_CLUE_EASY_DEFAULTCOLOR     "#09600d"
+#define CONST_CLUE_MEDIUM_DEFAULTCOLOR   "#569699"
+#define CONST_CLUE_HARD_DEFAULTCOLOR     "#833798"
+#define CONST_CLUE_ELITE_DEFAULTCOLOR    "#bda518"
+#define CONST_CLUE_MASTER_DEFAULTCOLOR   "#9b3026"
+
+#define VAR_CLUE_HIDE []
+
+#define VAR_CLUE_BEGINNER_CUSTOMSTYLE textColor = "#ffffff";backgroundColor = "#beb287";borderColor = "#ffffff";
+#define VAR_CLUE_EASY_CUSTOMSTYLE textColor = "#09600d";backgroundColor = "#beb287";borderColor = "#09600d";
+#define VAR_CLUE_MEDIUM_CUSTOMSTYLE textColor = "#569699";backgroundColor = "#beb287";borderColor = "#569699";
+#define VAR_CLUE_HARD_CUSTOMSTYLE textColor = "#833798";backgroundColor = "#beb287";borderColor = "#833798";
+#define VAR_CLUE_ELITE_CUSTOMSTYLE textColor = "#bda518";backgroundColor = "#beb287";borderColor = "#bda518";
+#define VAR_CLUE_MASTER_CUSTOMSTYLE textColor = "#9b3026";backgroundColor = "#beb287";borderColor = "#9b3026";
+
+if (name:VAR_CLUE_HIDE) { hidden = true; }
+
+apply (name:["clue scroll*", "reward casket*", "challenge scroll*"]) {
+  backgroundColor = CONST_CLUE_DEFAULTBG;
+}
+
+if (name:["clue scroll (beginner)", "reward casket (beginner)", "challenge scroll (beginner)"]) {
+  LIB_COLOR2(CONST_CLUE_BEGINNER_DEFAULTCOLOR)
+  VAR_CLUE_BEGINNER_CUSTOMSTYLE
+}
+if (name:["clue scroll (easy)", "reward casket (easy)", "challenge scroll (easy)"]) {
+  LIB_COLOR2(CONST_CLUE_EASY_DEFAULTCOLOR)
+  VAR_CLUE_EASY_CUSTOMSTYLE
+}
+if (name:["clue scroll (medium)", "reward casket (medium)", "challenge scroll (medium)"]) {
+  LIB_COLOR2(CONST_CLUE_MEDIUM_DEFAULTCOLOR)
+  VAR_CLUE_MEDIUM_CUSTOMSTYLE
+}
+if (name:["clue scroll (hard)", "reward casket (hard)", "challenge scroll (hard)"]) {
+  LIB_COLOR2(CONST_CLUE_HARD_DEFAULTCOLOR)
+  VAR_CLUE_HARD_CUSTOMSTYLE
+}
+if (name:["clue scroll (elite)", "reward casket (elite)", "challenge scroll (elite)"]) {
+  LIB_COLOR2(CONST_CLUE_ELITE_DEFAULTCOLOR)
+  VAR_CLUE_ELITE_CUSTOMSTYLE
+}
+if (name:["clue scroll (master)", "reward casket (master)", "challenge scroll (master)"]) {
+  LIB_COLOR2(CONST_CLUE_MASTER_DEFAULTCOLOR)
+  VAR_CLUE_MASTER_CUSTOMSTYLE
+}
+
+// endmodule:clue
+
+// module:herb
+
+#define CONST_HERB_HERBS [\
+  "*guam leaf",\
+  "*marrentill",\
+  "*tarromin",\
+  "*harralander",\
+  "*ranarr weed",\
+  "*toadflax",\
+  "*irit leaf",\
+  "*avantoe",\
+  "*kwuarm",\
+  "*huasca",\
+  "*snapdragon",\
+  "*cadantine",\
+  "*lantadyme",\
+  "*dwarf weed",\
+  "*torstol",\
+]
+
+#define CONST_HERB_DEFAULTCOLOR GREEN
+
+#define VAR_HERB_MINVALUE 1
+#define VAR_HERB_SHOW []
+#define VAR_HERB_HIDE ["guam leaf","marrentill","tarromin"]
+#define VAR_HERB_CUSTOMSTYLE textColor = "#00ff00";
+
+apply (name:CONST_HERB_HERBS) {
+  textColor = CONST_HERB_DEFAULTCOLOR;
+  VAR_HERB_CUSTOMSTYLE
+}
+
+apply (name:CONST_HERB_HERBS && value:<VAR_HERB_MINVALUE) { hidden = true; }
+
+if (name:VAR_HERB_SHOW) { hidden = false; }
+if (name:VAR_HERB_HIDE) { hidden = true; }
+
+if (name:CONST_HERB_HERBS) {}
+
+// endmodule:herb
